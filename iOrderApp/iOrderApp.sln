@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iOrderApp", "iOrderApp.csproj", "{D1931EF0-1B8C-4EFD-B5A9-ECCAA225533E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1931EF0-1B8C-4EFD-B5A9-ECCAA225533E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1931EF0-1B8C-4EFD-B5A9-ECCAA225533E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1931EF0-1B8C-4EFD-B5A9-ECCAA225533E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1931EF0-1B8C-4EFD-B5A9-ECCAA225533E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9B8AEFD8-CDCE-4D3B-9B14-A95D64A85FD1}
+	EndGlobalSection
+EndGlobal
