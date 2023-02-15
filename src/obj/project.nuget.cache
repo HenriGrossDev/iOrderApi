@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UJ2/IW0zBQmRLPizH03lcAiVn7fRjN3RgwUOWiTpcTcimh02qYoOfotlueTY52mLY+Yt95jRoB0X4+ndUHMN6g==",
+  "dgSpecHash": "okDjMCUzkc51A8NJqHDPj7DpOApy5sl7Pq0tc6YBQ60cXsxJ+dU+qOGrZMFNiStRbcJ6wJ6ZcCw+uVCj7fODYQ==",
   "success": true,
-  "projectFilePath": "D:\\Projetos\\C#\\iOrderApp\\src\\iOrderApp.csproj",
+  "projectFilePath": "d:\\Projetos\\C#\\iOrderApp\\src\\iOrderApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\henri\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\henri\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.3\\microsoft.entityframeworkcore.7.0.3.nupkg.sha512",
@@ -32,7 +32,11 @@
     "C:\\Users\\henri\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\henri\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\henri\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
-    "C:\\Users\\henri\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512"
+    "C:\\Users\\henri\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512",
+    "C:\\Users\\henri\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.12\\microsoft.netcore.app.ref.6.0.12.nupkg.sha512",
+    "C:\\Users\\henri\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.12\\microsoft.windowsdesktop.app.ref.6.0.12.nupkg.sha512",
+    "C:\\Users\\henri\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.12\\microsoft.aspnetcore.app.ref.6.0.12.nupkg.sha512",
+    "C:\\Users\\henri\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.12\\microsoft.netcore.app.host.win-x64.6.0.12.nupkg.sha512"
   ],
   "logs": []
 }
