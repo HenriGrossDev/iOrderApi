@@ -47,8 +47,3 @@ D:\Projetos\C#\iOrderApp\src\bin\Debug\net6.0\System.CodeDom.dll
 D:\Projetos\C#\iOrderApp\src\bin\Debug\net6.0\System.Text.Encodings.Web.dll
 D:\Projetos\C#\iOrderApp\src\bin\Debug\net6.0\System.Text.Json.dll
 D:\Projetos\C#\iOrderApp\src\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
-D:\Projetos\C#\iOrderApp\src\obj\Debug\net6.0\staticwebassets\msbuild.iOrderApp.Microsoft.AspNetCore.StaticWebAssets.props
-D:\Projetos\C#\iOrderApp\src\obj\Debug\net6.0\staticwebassets\msbuild.build.iOrderApp.props
-D:\Projetos\C#\iOrderApp\src\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.iOrderApp.props
-D:\Projetos\C#\iOrderApp\src\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.iOrderApp.props
-D:\Projetos\C#\iOrderApp\src\obj\Debug\net6.0\staticwebassets.pack.json
