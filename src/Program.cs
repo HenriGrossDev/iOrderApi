@@ -1,8 +1,12 @@
 ﻿using iOrderApp.Endpoints.Categories;
 using iOrderApp.infra.Data;
+using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddNpgsql<ApplicationDbContext>(builder.Configuration["ConnectionStrings:IOrderDb"]);
+builder.Services.AddNpgsql<ApplicationDbContext>(
+    builder.Configuration["ConnectionStrings:IOrderDb"]);
+builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+    .AddEntityFrameworkStores<ApplicationDbContext>();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
