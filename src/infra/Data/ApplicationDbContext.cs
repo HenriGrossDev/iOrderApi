@@ -1,4 +1,5 @@
-﻿using iOrderApp.Domain;
+﻿using Flunt.Notifications;
+using iOrderApp.Domain;
 using iOrderApp.Domain.Products;
 using Microsoft.EntityFrameworkCore;
 
@@ -16,6 +17,9 @@ public class ApplicationDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
+
+        builder.Ignore<Notification>();
+
         builder.Entity<Product>()
             .Property(p => p.Name).IsRequired();
 

@@ -1,6 +1,8 @@
-﻿namespace iOrderApp.Domain;
+﻿using Flunt.Notifications;
 
-public abstract class Entity
+namespace iOrderApp.Domain;
+
+public abstract class Entity : Notifiable<Notification>
 {
 
     public Entity()
