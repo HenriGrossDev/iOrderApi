@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "cDNsJeUUsGxEgYEnnoPl8YucAOFT29zR0gRdAxPQesqJqPnaAyDkaNINzDz8Ko3gFJJY4YInfn3MY7UVSZQm8A==",
+  "dgSpecHash": "SJhkhe9kYM9YlkjetdOmG7Rghcf0lDNt3yCg0NfgwKyGeNK9JkLu86JCZk2QWnmALEtyI0b3zPnPL1xIxyQ9zQ==",
   "success": true,
   "projectFilePath": "D:\\Projetos\\C#\\iOrderApp\\src\\iOrderApp.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\henri\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\henri\\.nuget\\packages\\flunt\\2.0.5\\flunt.2.0.5.nupkg.sha512",
     "C:\\Users\\henri\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\henri\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.0\\microsoft.aspnetcore.cryptography.internal.6.0.0.nupkg.sha512",
@@ -38,11 +39,7 @@
     "C:\\Users\\henri\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\henri\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\henri\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
-    "C:\\Users\\henri\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512",
-    "C:\\Users\\henri\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.12\\microsoft.netcore.app.ref.6.0.12.nupkg.sha512",
-    "C:\\Users\\henri\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.12\\microsoft.windowsdesktop.app.ref.6.0.12.nupkg.sha512",
-    "C:\\Users\\henri\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.12\\microsoft.aspnetcore.app.ref.6.0.12.nupkg.sha512",
-    "C:\\Users\\henri\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.12\\microsoft.netcore.app.host.win-x64.6.0.12.nupkg.sha512"
+    "C:\\Users\\henri\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512"
   ],
   "logs": []
 }

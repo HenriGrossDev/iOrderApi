@@ -1,6 +1,9 @@
-﻿using System.Security.Claims;
+﻿using System.Reflection.Metadata.Ecma335;
+using System.Security.Claims;
+using Dapper;
 using iOrderApp.Endpoints.Emloyees;
 using Microsoft.AspNetCore.Identity;
+using Npgsql;
 
 namespace iOrderApp.Endpoints.Employees;
 
@@ -14,16 +17,18 @@ public class EmployeeGetAll
     public static IResult Action(int page, int rows, UserManager<IdentityUser> userManager)
     {
         var users = userManager.Users.Skip((page - 1) * rows).Take(rows).ToList();
-        var employeesList = new List<EmployeeResponse>();
-        foreach (var item in users)
-        {
-            var claims = userManager.GetClaimsAsync(item).Result;
+        var employees = new List<EmployeeResponse>();
+
+        foreach (var user in users) {
+            var claims = userManager.GetClaimsAsync(user).Result;
             var claimName = claims.FirstOrDefault(c => c.Type == "Name");
-            var username = claimName != null ? claimName.Value : string.Empty;
-            employeesList.Add(new EmployeeResponse(item.Email, username));
+            var userName = claimName != null ? claimName.Value : string.Empty;
+            employees.Add(new EmployeeResponse(user.Email, userName));
         }
-        
-        return Results.Ok(employeesList);
+
+        return Results.Ok(employees);
     }
+
+    
 
 }
