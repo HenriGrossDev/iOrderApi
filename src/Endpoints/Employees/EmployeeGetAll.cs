@@ -2,10 +2,12 @@
 using System.Security.Claims;
 using Dapper;
 using iOrderApp.Endpoints.Emloyees;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Npgsql;
 
 namespace iOrderApp.Endpoints.Employees;
+
 
 public class EmployeeGetAll
 {
@@ -14,6 +16,8 @@ public class EmployeeGetAll
 
     public static Delegate Handle => Action;
 
+
+    [Authorize(Policy = "EmployeePolicy")]
     public static IResult Action(int page, int rows, UserManager<IdentityUser> userManager)
     {
         var users = userManager.Users.Skip((page - 1) * rows).Take(rows).ToList();

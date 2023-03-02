@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projetos\\C#\\iOrderApp\\src\\iOrderApp.csproj": {}
+    "D:\\C#\\Projetos\\iOrderApi\\iOrderApi\\src\\iOrderApp.csproj": {}
   },
   "projects": {
-    "D:\\Projetos\\C#\\iOrderApp\\src\\iOrderApp.csproj": {
+    "D:\\C#\\Projetos\\iOrderApi\\iOrderApi\\src\\iOrderApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projetos\\C#\\iOrderApp\\src\\iOrderApp.csproj",
+        "projectUniqueName": "D:\\C#\\Projetos\\iOrderApi\\iOrderApi\\src\\iOrderApp.csproj",
         "projectName": "iOrderApp",
-        "projectPath": "D:\\Projetos\\C#\\iOrderApp\\src\\iOrderApp.csproj",
-        "packagesPath": "C:\\Users\\henri\\.nuget\\packages\\",
-        "outputPath": "D:\\Projetos\\C#\\iOrderApp\\src\\obj\\",
+        "projectPath": "D:\\C#\\Projetos\\iOrderApi\\iOrderApi\\src\\iOrderApp.csproj",
+        "packagesPath": "C:\\Users\\Henrique Grosscklaus\\.nuget\\packages\\",
+        "outputPath": "D:\\C#\\Projetos\\iOrderApi\\iOrderApi\\src\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\henri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Henrique Grosscklaus\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -47,6 +47,10 @@
             "Flunt": {
               "target": "Package",
               "version": "[2.0.5, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.0, )"
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
@@ -90,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

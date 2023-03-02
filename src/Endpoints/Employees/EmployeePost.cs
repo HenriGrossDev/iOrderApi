@@ -1,8 +1,10 @@
 ﻿using System.Security.Claims;
 using iOrderApp.Endpoints.Emloyees;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 
 namespace iOrderApp.Endpoints.Employees;
+
 
 public class EmployeePost
 {
@@ -11,6 +13,7 @@ public class EmployeePost
 
     public static Delegate Handle => Action;
 
+    [AllowAnonymous]
     public static IResult Action(EmployeeRequest employeeRequest, UserManager<IdentityUser> userManager)
     {
         var user = new IdentityUser { UserName = employeeRequest.Email, Email = employeeRequest.Email };
