@@ -11,7 +11,7 @@ public class CategoryPost
 
     public static Delegate Handle => Action;
 
-    [Authorize]
+    
     public static IResult Action(CategoryRequest categoryRequest, ApplicationDbContext context)
     {
 

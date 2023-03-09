@@ -2,9 +2,10 @@
 using System.Security.Claims;
 using Dapper;
 using iOrderApp.Endpoints.Emloyees;
+using iOrderApp.infra.Data;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
-using Npgsql;
+using Microsoft.Data.SqlClient;
 
 namespace iOrderApp.Endpoints.Employees;
 
@@ -17,20 +18,22 @@ public class EmployeeGetAll
     public static Delegate Handle => Action;
 
 
-    [Authorize(Policy = "EmployeePolicy")]
-    public static IResult Action(int page, int rows, UserManager<IdentityUser> userManager)
-    {
-        var users = userManager.Users.Skip((page - 1) * rows).Take(rows).ToList();
-        var employees = new List<EmployeeResponse>();
 
-        foreach (var user in users) {
-            var claims = userManager.GetClaimsAsync(user).Result;
-            var claimName = claims.FirstOrDefault(c => c.Type == "Name");
-            var userName = claimName != null ? claimName.Value : string.Empty;
-            employees.Add(new EmployeeResponse(user.Email, userName));
+    public static IResult Action(int? page, int? rows, QueryAllUsersWithClaimName query)
+    {
+
+        if (page == null || page == 0)
+        {
+            return Results.BadRequest("Pages cannot be 0 or null");
         }
 
-        return Results.Ok(employees);
+        if (rows == null || rows > 10 || rows == 0)
+        {
+            return Results.BadRequest("Rows Cannot be null or over 10");
+        }
+
+
+        return Results.Ok(query.Execute(page.Value, rows.Value));
     }
 
     

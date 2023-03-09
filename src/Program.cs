@@ -10,52 +10,24 @@ using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddNpgsql<ApplicationDbContext>(
-    builder.Configuration["ConnectionStrings:IOrderDb"]);
+builder.Services.AddSqlServer<ApplicationDbContext>(
+    builder.Configuration["ConnectionStrings:IorderApp"]);
 builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
-        {
-            options.Password.RequireNonAlphanumeric = false;
-            options.Password.RequireDigit = false;
-            options.Password.RequireUppercase = false;
-            options.Password.RequiredLength = 3;
-        })
-    .AddEntityFrameworkStores<ApplicationDbContext>();
+{
+    options.Password.RequireNonAlphanumeric = false;
+    options.Password.RequireDigit = false;
+    options.Password.RequireUppercase = false;
+    options.Password.RequireLowercase = false;
+    options.Password.RequiredLength = 3;
+}).AddEntityFrameworkStores<ApplicationDbContext>();
 
-builder.Services.AddAuthorization(options =>
-{
-    options.FallbackPolicy = new AuthorizationPolicyBuilder()
-      .AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme)
-      .RequireAuthenticatedUser()
-      .Build();
-    options.AddPolicy("EmployeePolicy", p =>
-        p.RequireAuthenticatedUser().RequireClaim("EmployeeCode"));
-    
-});
-
-builder.Services.AddAuthentication(x =>
-{
-    x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-    x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-}).AddJwtBearer(options =>
-{
-    options.TokenValidationParameters = new TokenValidationParameters()
-    {
-        ValidateActor = true,
-        ValidateAudience = true,
-        ValidateLifetime = true,
-        ValidateIssuerSigningKey = true,
-        ValidIssuer = builder.Configuration["JwtBearerTokenSettings:Issuer"],
-        ValidAudience = builder.Configuration["JwtBearerTokenSettings:Audience"],
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JwtBearerTokenSettings:SecretKey"]))
-    };
-});
+builder.Services.AddScoped<QueryAllUsersWithClaimName>();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
-app.UseAuthorization();
-app.UseAuthentication();
+
 
 
 if (app.Environment.IsDevelopment())
