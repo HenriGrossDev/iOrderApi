@@ -1,6 +1,9 @@
-﻿using iOrderApp.Domain.Products;
+﻿using System.Security.Claims;
+using iOrderApp.Domain.Products;
 using iOrderApp.infra.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using static System.Net.WebRequestMethods;
 
 namespace iOrderApp.Endpoints.Categories;
 
@@ -11,14 +14,17 @@ public class CategoryPut
 
     public static Delegate Handle => Action;
 
-    public static IResult Action([FromRoute] Guid id, CategoryRequest categoryRequest, ApplicationDbContext context)
+    [Authorize(Policy = "EmployeePolicy")]
+    public static IResult Action([FromRoute] Guid id, CategoryRequest categoryRequest, HttpContext http, ApplicationDbContext context)
     {
+
+        var userId = http.User.Claims.First(c => c.Type == ClaimTypes.NameIdentifier).Value;
         var category = context.Categories.Where(c => c.Id == id).FirstOrDefault();
         
         if (category == null)
             return Results.NotFound();
 
-        category.EditInfo(categoryRequest.Name, categoryRequest.Active);
+        category.EditInfo(categoryRequest.Name, categoryRequest.Active, userId);
 
         if (!category.IsValid)
             return Results.ValidationProblem(category.Notifications.ConvertToProblemDetails());

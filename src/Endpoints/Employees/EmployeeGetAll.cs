@@ -18,7 +18,7 @@ public class EmployeeGetAll
     public static Delegate Handle => Action;
 
 
-
+    [Authorize(Policy = "Employee065Policy")]
     public static IResult Action(int? page, int? rows, QueryAllUsersWithClaimName query)
     {
 

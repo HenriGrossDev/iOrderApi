@@ -1,5 +1,6 @@
 ﻿using iOrderApp.Domain.Products;
 using iOrderApp.infra.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace iOrderApp.Endpoints.Categories;
@@ -11,6 +12,7 @@ public class CategoryDelete
 
     public static Delegate Handle => Action;
 
+    [Authorize]
     public static IResult Action([FromRoute]Guid id, ApplicationDbContext context)
     {
         var category = context.Categories.Where(c => c.Id == id).FirstOrDefault();
