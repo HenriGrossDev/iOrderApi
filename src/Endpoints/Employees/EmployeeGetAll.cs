@@ -19,7 +19,7 @@ public class EmployeeGetAll
 
 
     [Authorize(Policy = "Employee065Policy")]
-    public static IResult Action(int? page, int? rows, QueryAllUsersWithClaimName query)
+    public static async Task<IResult> Action(int? page, int? rows, QueryAllUsersWithClaimName query)
     {
 
         if (page == null || page == 0)
@@ -32,8 +32,8 @@ public class EmployeeGetAll
             return Results.BadRequest("Rows Cannot be null or over 10");
         }
 
-
-        return Results.Ok(query.Execute(page.Value, rows.Value));
+        var result = await query.Execute(page.Value, rows.Value);
+        return Results.Ok(result);
     }
 
     
