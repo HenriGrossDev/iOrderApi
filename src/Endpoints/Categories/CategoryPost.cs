@@ -14,7 +14,7 @@ public class CategoryPost
 
 
     [Authorize(Policy = "EmployeePolicy")]
-    public static IResult Action(CategoryRequest categoryRequest, HttpContext http, ApplicationDbContext context)
+    public static async Task<IResult> Action(CategoryRequest categoryRequest, HttpContext http, ApplicationDbContext context)
     {
         var userId = http.User.Claims.First(c => c.Type == ClaimTypes.NameIdentifier).Value;
 
@@ -26,8 +26,8 @@ public class CategoryPost
         }
 
 
-        context.Categories.Add(category);
-        context.SaveChanges();
+        await context.Categories.AddAsync(category);
+        await context.SaveChangesAsync();
 
 
         return Results.Created($"/categories/{category.Id}", category.Id);
