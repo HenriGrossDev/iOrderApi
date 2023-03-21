@@ -1,8 +1,5 @@
 ﻿namespace iOrderApp.Endpoints.Categories;
 
-public class CategoryResponse
+public record CategoryResponse(Guid Id, string Name, bool Active)
 {
-    public Guid Id { get; set; }
-    public String Name { get; set; }
-    public bool Active { get; set; }
 }
