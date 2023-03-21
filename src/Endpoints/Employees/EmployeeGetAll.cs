@@ -1,13 +1,4 @@
-﻿using System.Reflection.Metadata.Ecma335;
-using System.Security.Claims;
-using Dapper;
-using iOrderApp.Endpoints.Emloyees;
-using iOrderApp.infra.Data;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.Data.SqlClient;
-
-namespace iOrderApp.Endpoints.Employees;
+﻿namespace iOrderApp.Endpoints.Employees;
 
 
 public class EmployeeGetAll

@@ -1,9 +1,4 @@
-﻿using iOrderApp.Domain.Products;
-using iOrderApp.infra.Data;
-using iOrderApp.Endpoints.Categories;
-using Microsoft.AspNetCore.Authorization;
-
-namespace iOrderApp.Endpoints.Categories;
+﻿namespace iOrderApp.Endpoints.Categories;
 
 public class CategoryGetAll
 {

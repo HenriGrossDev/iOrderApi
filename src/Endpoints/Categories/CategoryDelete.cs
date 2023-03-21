@@ -1,9 +1,4 @@
-﻿using iOrderApp.Domain.Products;
-using iOrderApp.infra.Data;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-
-namespace iOrderApp.Endpoints.Categories;
+﻿namespace iOrderApp.Endpoints.Categories;
 
 public class CategoryDelete
 {

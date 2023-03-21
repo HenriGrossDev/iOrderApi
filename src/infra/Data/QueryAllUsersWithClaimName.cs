@@ -1,8 +1,4 @@
-﻿using Dapper;
-using iOrderApp.Endpoints.Emloyees;
-using Microsoft.Data.SqlClient;
-
-namespace iOrderApp.infra.Data
+﻿namespace iOrderApp.infra.Data
 {
     public class QueryAllUsersWithClaimName
     {

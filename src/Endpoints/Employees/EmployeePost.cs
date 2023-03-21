@@ -1,9 +1,4 @@
-﻿using System.Security.Claims;
-using iOrderApp.Endpoints.Emloyees;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
-
-namespace iOrderApp.Endpoints.Employees;
+﻿namespace iOrderApp.Endpoints.Employees;
 
 
 public class EmployeePost

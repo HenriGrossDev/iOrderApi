@@ -1,11 +1,4 @@
-﻿using System.Security.Claims;
-using iOrderApp.Domain.Products;
-using iOrderApp.infra.Data;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using static System.Net.WebRequestMethods;
-
-namespace iOrderApp.Endpoints.Categories;
+﻿namespace iOrderApp.Endpoints.Categories;
 
 public class CategoryPut
 {

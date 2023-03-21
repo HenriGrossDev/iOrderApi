@@ -1,9 +1,4 @@
-﻿using System.Security.Claims;
-using iOrderApp.Domain.Products;
-using iOrderApp.infra.Data;
-using Microsoft.AspNetCore.Authorization;
-
-namespace iOrderApp.Endpoints.Categories;
+﻿namespace iOrderApp.Endpoints.Categories;
 
 public class CategoryPost
 {

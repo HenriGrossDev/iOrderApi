@@ -1,18 +1,11 @@
-﻿using Flunt.Notifications;
-using iOrderApp.Domain;
-using iOrderApp.Domain.Products;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
-
-namespace iOrderApp.infra.Data;
+﻿namespace iOrderApp.infra.Data;
 
 public class ApplicationDbContext : IdentityDbContext<IdentityUser>
 {
     public DbSet<Product> Products { get; set; }
     public DbSet<Category> Categories { get; set; }
 
-    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options ) : base(options)
+    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
     {
         
     }
