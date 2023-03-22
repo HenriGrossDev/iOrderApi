@@ -1,6 +1,7 @@
 ﻿using System.Text;
 using iOrderApp.Endpoints.Categories;
 using iOrderApp.Endpoints.Employees;
+using iOrderApp.Endpoints.Products;
 using iOrderApp.Endpoints.Security;
 using iOrderApp.infra.Data;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -93,6 +94,9 @@ app.MapMethods(CategoryDelete.Template, CategoryDelete.Methods, CategoryDelete.H
 app.MapMethods(EmployeeGetAll.Template, EmployeeGetAll.Methods, EmployeeGetAll.Handle);
 app.MapMethods(EmployeePost.Template,  EmployeePost.Methods,EmployeePost.Handle);
 app.MapMethods(TokenPost.Template, TokenPost.Methods, TokenPost.Handle);
+app.MapMethods(ProductPost.Template, ProductPost.Methods, ProductPost.Handle);
+app.MapMethods(ProductGetAll.Template, ProductGetAll.Methods, ProductGetAll.Handle);
+
 
 app.UseExceptionHandler("/error");
 app.Map("/error", (HttpContext http) =>
