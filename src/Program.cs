@@ -1,4 +1,5 @@
 ﻿using System.Text;
+using System.Text.Json;
 using iOrderApp.Endpoints.Categories;
 using iOrderApp.Endpoints.Employees;
 using iOrderApp.Endpoints.Products;
@@ -107,6 +108,8 @@ app.Map("/error", (HttpContext http) =>
     {
         if (error is SqlException)
             return Results.Problem(title: "Database out", statusCode: 500);
+        else if (error is BadHttpRequestException)
+            return Results.Problem(title: "Error to convert data to other type. Review all the information that has been sent", statusCode: 500);
     }
 
     return Results.Problem(title: "An error ocurred", statusCode: 500);
