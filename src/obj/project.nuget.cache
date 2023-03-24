@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pPJtd6pxwWr9bfd4adY49ENawWpi3q7JCoOHHfmkKhRwSEpZmoNlFU1ReeuwvrbnyeX5x92sF+nnkATbUXfAoA==",
+  "dgSpecHash": "T8G5QENR5nU5pSnDY3JuMO6e6HCFhRutFB0xUvfFftdo4JeKa5W/4lyO9bj5Ri+15xyvJSt/7JasHUtD08wPtA==",
   "success": true,
-  "projectFilePath": "D:\\C#\\Projetos\\iOrderApi\\iOrderApi\\src\\iOrderApp.csproj",
+  "projectFilePath": "D:\\C#\\Projetos\\iOrderApi\\src\\iOrderApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Henrique Grosscklaus\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Henrique Grosscklaus\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

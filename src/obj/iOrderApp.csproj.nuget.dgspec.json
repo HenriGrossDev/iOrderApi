@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\C#\\Projetos\\iOrderApi\\iOrderApi\\src\\iOrderApp.csproj": {}
+    "D:\\C#\\Projetos\\iOrderApi\\src\\iOrderApp.csproj": {}
   },
   "projects": {
-    "D:\\C#\\Projetos\\iOrderApi\\iOrderApi\\src\\iOrderApp.csproj": {
+    "D:\\C#\\Projetos\\iOrderApi\\src\\iOrderApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C#\\Projetos\\iOrderApi\\iOrderApi\\src\\iOrderApp.csproj",
+        "projectUniqueName": "D:\\C#\\Projetos\\iOrderApi\\src\\iOrderApp.csproj",
         "projectName": "iOrderApp",
-        "projectPath": "D:\\C#\\Projetos\\iOrderApi\\iOrderApi\\src\\iOrderApp.csproj",
+        "projectPath": "D:\\C#\\Projetos\\iOrderApi\\src\\iOrderApp.csproj",
         "packagesPath": "C:\\Users\\Henrique Grosscklaus\\.nuget\\packages\\",
-        "outputPath": "D:\\C#\\Projetos\\iOrderApi\\iOrderApi\\src\\obj\\",
+        "outputPath": "D:\\C#\\Projetos\\iOrderApi\\src\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Henrique Grosscklaus\\AppData\\Roaming\\NuGet\\NuGet.Config",
